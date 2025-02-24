@@ -1,0 +1,38 @@
+﻿@{
+    @model List<EmprendedorModel>
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Bienvenidos</h1>
+    <p>Learn about <a href="https://learn.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+
+    <a href="/Home/Privacy?nombre=Diego&apellido=Valdivieso&edad=43">Politicas de Privacidad</a>
+</div>
+
+<div class="row">
+    <h2>Lista de Emprendedores</h2>
+    <table class="table table-bordered table-responsive">
+        <thead>
+            <tr>
+                <th>Cedula</th>
+                <th>Nombre</th>
+                <th>Apellido</th>
+                <th>Edad</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var emprendedor in Model)
+            {
+                <tr>
+                    <td>@emprendedor.Cedula_Ruc</td>
+                    <td>@emprendedor.Nombre</td>
+                    <td>@emprendedor.Apellido</td>
+                    <td>@emprendedor.Edad</td>
+                </tr>
+                
+            }
+        </tbody>
+</table>
+
+</div>
