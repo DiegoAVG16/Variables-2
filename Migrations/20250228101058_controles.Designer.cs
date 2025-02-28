@@ -3,6 +3,7 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using Variables_2.Config;
 
@@ -11,9 +12,11 @@ using Variables_2.Config;
 namespace Variables_2.Migrations
 {
     [DbContext(typeof(Variables2DbContext))]
-    partial class Variables2DbContextModelSnapshot : ModelSnapshot
+    [Migration("20250228101058_controles")]
+    partial class controles
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
